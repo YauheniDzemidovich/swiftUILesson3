@@ -30,14 +30,12 @@ struct NextTrackButton: View {
                 Image(systemName: Settings.imageName)
                     .resizable()
                     .frame(width: startElementSize, height: startElementSize)
-                    .opacity(isAnimating ? 1 : 0.5)
                 Image(systemName: Settings.imageName)
                     .resizable()
                     .frame(width: Settings.elementSize, height: Settings.elementSize)
                 Image(systemName: Settings.imageName)
                     .resizable()
                     .frame(width: endElementSize, height: endElementSize)
-                    .opacity(isAnimating ? 0.5 : 1)
             }
             .animation(isAnimating ? .spring(dampingFraction: 0.5, blendDuration: Settings.duration) : nil, value: isAnimating)
         }
